@@ -418,3 +418,12 @@ config HTC_DEBUG_PAGE_USER_TRACE
 config HTC_DEBUG_PAGE_ENTRIES_NR
     int
     default 8
+
+config DYNAMIC_PAGE_WRITEBACK
+	bool "Dynamically manage the dirty page writebacks during suspend/resume"
+	default y
+	help
+	  This feature allows to use different dirty page writeback intervals
+	  when the system is suspended and when the system has been resumed.
+
+	  If unsure, say N to disable this feature
