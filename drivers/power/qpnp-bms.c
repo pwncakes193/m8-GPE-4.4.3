@@ -893,7 +893,7 @@ static bool is_battery_present(struct qpnp_bms_chip *chip)
 static int get_battery_insertion_ocv_uv(struct qpnp_bms_chip *chip)
 {
 	union power_supply_propval ret = {0,};
-	int rc, vbat;
+	int rc, vbat = 0;
 
 	if (chip->batt_psy == NULL)
 		chip->batt_psy = power_supply_get_by_name("battery");
